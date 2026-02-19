@@ -1,0 +1,81 @@
+El objetivo de esta práctica es construir una aplicación web utilizando React que consuma datos reales de la SWAPI (Star Wars API). La aplicación debe listar personajes en tarjetas, gestionar los estados de espera y error, y permitir cargar más resultados mediante paginación.
+
+
+
+Instrucciones generales
+Crear un repositorio de GitHub para almacenar todo el código de las practicas. https://github.com
+Usar Typescript como lenguaje
+Crear una carpeta de practica-1 donde dentro contendrá un archivo por cada ejercicio
+El desarrollo es individual
+NO esta permitido el uso de IA generativa para resolver la actividad
+
+
+
+
+1. Requisitos Técnicos
+1.Lógica de Componentes:
+
+Componente Principal (App): Debe contener la lógica de llamada a la API.
+Componente CharacterList: Recibirá los datos como props y se encargará de renderizar la lista.
+Componente CharacterCard: Recibirá un objeto personaje como prop y pintará su información individual.
+Componente Loader y Error: Componentes simples para mostrar estados de carga y fallos.
+2.Gestión de Estado y Hooks:
+
+Implementar useEffect para realizar la llamada a https://swapi.dev/api/people/ al montar el componente.
+Implementar useState para gestionar al menos tres estados:
+characters: Array con la lista de personajes.
+loading: Booleano para mostrar un spinner o texto de "Cargando...".
+error: String o null para mostrar mensajes si la petición falla.
+3.Paginación:
+
+La API devuelve una URL next en el JSON.
+Implementar un botón "Siguiente Página" que, al ser pulsado, realice una nueva petición a esa URL y acumule los nuevos personajes en el estado existente (no reemplazarlos).
+2. Criterios de Evaluación
+Criterio
+
+Detalle
+
+Puntaje
+
+Conexión API y Datos (3.0 pts)
+
+- La llamada fetch se realiza correctamente en el useEffect.
+
+- Los datos se transforman y muestran en las tarjetas sin errores de consola.
+
+- Se visualizan correctamente los campos: Nombre, Género, Año Nacimiento.
+
+3
+
+Gestión de Estado (3.0 pts)
+
+- Implementación correcta y visible del estado loading (evita pantallas en blanco).
+
+- Manejo robusto del estado error (captura de catch).
+
+- La paginación funciona y acumula datos correctamente.
+
+3
+
+Arquitectura de Componentes (2.0 pts)
+
+- Código modularizado correctamente (Card, List, App separados).
+
+- Uso correcto de props para comunicación entre componentes.
+
+2
+
+Interfaz y Estilos (2.0 pts)
+
+- Estética cuidada (tarjetas diferenciadas, buen contraste).
+
+2
+
+
+
+3. Instrucciones de Entrega
+Subir el código a un repositorio en GitHub.
+El README.md debe contener:
+Comando para instalar dependencias (npm install).
+Comando para arrancar el proyecto (npm run dev).
+Breve explicación de como se ha realizado el proyecto, problemas encontrado y soluciones
