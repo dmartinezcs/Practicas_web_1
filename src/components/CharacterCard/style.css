@@ -1,0 +1,8 @@
+.cardStyle{
+  border: "1px solid #ccc";
+  border-radius: "8px";
+  padding: "1rem";
+  margin: "0.5rem";
+  width: "250px";
+  background-color: "#fabada";
+};
