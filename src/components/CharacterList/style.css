@@ -1,5 +1,6 @@
-.containerStyle{
-  display: "flex";
-  flex-wrap: "wrap";
-  justify-content: "center";
-};
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
